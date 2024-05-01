@@ -6,3 +6,18 @@ spring:
 
 #JPA Settings
   jpa.hibernate.ddl_auto: create
+
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: "caches"
+      base-path: "/management-dashboard"
+  endpoint:
+    health:
+      show-details: always
