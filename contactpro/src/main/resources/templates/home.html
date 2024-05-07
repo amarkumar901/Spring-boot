@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" data-th-href="@{'/css/output.css'}">
     <style>
-        .container{
-            margin:auto;
+        .container {
+            margin: auto;
             width: 50%;
             padding: 30px;
             background: #e2e2e2;
@@ -16,13 +18,18 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1>Welcome to home page</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis quibusdam minima nihil atque quisquam dolorem
+    <div class="bg-gray-200 w-1/2 p-4 flex flex-col justify-center items-center space-y-3 mx-auto mt-4">
+        <h1 class="text-2 font-bold" data-th-text="${name}">Welcome to home page</h1>
+        <p>Youtube Channel : <span data-th-text="${youtubeChannel}"></span></p>
+        <p class="text-green-600">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis quibusdam minima nihil
+            atque quisquam dolorem
             error nesciunt dolorum porro enim vero sequi suscipit, adipisci fugit officia alias. Quisquam, ab inventore?
         </p>
-
+        <div>
+            <button class="px-3 py-3 bg-blue-700 text-white hover:bg-blue-600"> Click here</button>
+        </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </body>
 
 </html>
