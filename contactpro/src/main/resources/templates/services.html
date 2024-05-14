@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <p1>This is services page!</p1>
-    <div class="host-tag" th:replace="~{base :: parent('Service one', 'service two')}"></div>
-</body>
+<html lang="en" th:replace="~{base :: parent(~{::#content},~{::title},~{})}">
+    <head>
+        <title>Services page</title>
+    </head>
+    <body>
+        <section id="content">
+            <h1>Welcome to services page</h1>
+            <h2>Services offered by contactPro</h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, error!
+        </section>
+        <script>
+            console.log("Services page.")
+        </script>
+    </body>
 </html>
